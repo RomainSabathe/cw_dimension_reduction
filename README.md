@@ -15,14 +15,13 @@ Objective and methodology
 ----------------
 Given a dataset, we project it into a subdimensional space using different dimensionality reduction techniques and then perform a really simple classification procedure (here, it is k-nearest-neighborhood with k = 1). We do this while increasing the size of the projection space with the idea that, with more dimensions come more discriminant capabilities. The goal is to see, for a given subspace, which algorithm succeeded in spreading the data the most and therefore realised the best classification performance. We can expect this algorithm to be LDA as it is exactly designed to try to spread clusters away while packing points belonging to the same cluster together.
 
-We performed a 20 folds-cross-validation. For each fold, we create a train set I train and a test set $I_\text{test}$ ($I$ stands for ”images”). A projection matrix is obtained using $I_\text{train}$ only and we use this very projection matrix to project $I_\text{test}$. It is within the latent space that we perform k-NN. For each fold and each dimension of the latent space, a classification error rate is calculated and reported within the folder ”perf results”.
+We performed a 20 folds-cross-validation. For each fold, we create a train set I train and a test set I_test (I stands for ”images”). A projection matrix is obtained using I_train only and we use this very projection matrix to project I_test$. It is within the latent space that we perform k-NN. For each fold and each dimension of the latent space, a classification error rate is calculated and reported within the folder ”perf results”.
 
 Results
 ----------------
 The final plot can be seen in the "perf_results" folder.
 
-![Final results]
-(https://github.com/RomainSabathe/cw_dimension_reduction/blob/master/perf_results/result.png)
+<img src="https://github.com/RomainSabathe/cw_dimension_reduction/blob/master/perf_results/result.png" width="500px" height="500px">
 
 About the code
 ----------------
